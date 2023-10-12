@@ -1,0 +1,196 @@
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+}
+
+header.mainsite h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px #000000; /* shadow effect */
+    transition: all 0.6s ease-in-out; /* smooth transition for any change */
+    position: relative; /* relative positioning to parent */
+}
+
+h1:hover {
+    transform: scale(1.1); /* slightly increase size when hovered */
+    text-shadow: 4px 4px 8px #000000; /* enhanced shadow effect on hover */
+}
+
+.nederst {
+    text-align: center;
+    position: fixed; /* changed to fixed */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0; /* Add some padding */
+    background-color: #3d3c3c; /* Add a background color */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    transition: all 0.6s ease-in-out;
+}
+
+
+/* CSS Variables */
+:root {
+    --main-bg-color: rgb(61, 60, 60);
+    --main-txt-color: #fff;
+    --accent-color: #f4c242;
+    --hover-color: #555;
+    --font-family: 'Arial', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--font-family);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+}
+
+/* Header */
+header.mainsite {
+    background: var(--main-bg-color);
+    color: var(--main-txt-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header.mainsite h1 {
+    margin: 0;
+}
+
+/* Main content */
+main {
+    padding: 15px;
+}
+
+/* Buttons */
+.button-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.button {
+    display: inline-block;
+    color: var(--main-txt-color);
+    background-color: var(--main-bg-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: var(--main-bg-color);
+    color: var(--main-txt-color);
+}
+/* Coin */
+.coin {
+    z-index: 1;
+    position: absolute;
+    top: 230px;
+    left: 55%; /* adjusted for better centering */
+    transform: translateX(-50%); /* center element horizontally */
+    width: 80px;
+    height: 80px;
+    background: var(--accent-color);
+    border-radius: 50%; /* circle shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 2s ease-in-out;
+}
+
+/* Coin text */
+.coin-text {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: var(--main-txt-color);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2em;
+    display: none;
+    z-index: 2;
+}
+
+/* Animations */
+@keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes floating {
+    from { transform: translate3d(0, 0, 0); }
+    65%  { transform: translate3d(0, -15px, 0); }
+    to   { transform: translate3d(0, 0, 0); }
+}
+
+.animated-element {
+    animation: floating 3s ease-in-out infinite;
+}
+
+#tail {
+    animation-duration: 1.5s; /* Different timing for tail */
+}
+
+@keyframes blink {
+    to { visibility: hidden; }
+}
+
+#eyes_open {
+    animation: blink 1s steps(10, start) infinite;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    .coin {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .coin-text {
+        font-size: 1.5em;
+    }
+
+    /* Add more responsive styles as needed */
+}
+
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
