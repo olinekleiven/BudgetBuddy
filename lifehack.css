@@ -1,0 +1,163 @@
+/* Base styles */
+body {
+    background: #3d3c3c;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Typography */
+h1, p {
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    transition: all 0.6s ease-in-out;
+}
+
+h1:hover {
+    transform: scale(1.1);
+    text-shadow: 4px 4px 8px #000000;
+}
+
+/* Footer styles */
+.nederst {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    background-color: #3d3c3c;
+    color: white;
+}
+
+/* Button styles */
+.homebutton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    color: #000;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.homebutton:hover {
+    background-color: #f4c242;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.homebutton:active {
+    background-color: #3d3c3c;
+    box-shadow: none;
+    color: white;
+    transform: translateY(1px);
+}
+
+.homebutton a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Card styles */
+#card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-top: 150px;
+}
+
+.flashcard {
+    width: 350px;
+    height: 400px;
+    border-radius: 15px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.flashcard-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 15px;
+}
+
+.flashcard:hover .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+    color: #FFF;
+    background-color: inherit;
+}
+
+/* Button container */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#prevBtn, #nextBtn {
+    padding: 12px 25px;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    border: 2px solid #f4c242;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #f4c242;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #f4c242;
+    color: #2c3e50;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px);
+}
+
+/* Color classes */
+.color1 { background-color: #e67e22; }
+.color2 { background-color: #2980b9; }
+.color3 { background-color: #27ae60; }
+.color4 { background-color: #8e44ad; }
+.color5 { background-color: #c0392b; }
