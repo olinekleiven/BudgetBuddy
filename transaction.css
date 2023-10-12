@@ -1,0 +1,209 @@
+/* General styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background: #3d3c3c;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    transition: all 0.6s ease-in-out;
+    position: relative;
+}
+
+h1:hover {
+    transform: scale(1.1);
+    text-shadow: 4px 4px 8px #000000;
+}
+
+p {
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    transition: all 0.6s ease-in-out;
+}
+
+.nederst {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    color: white;
+}
+
+/* Increased readability for headings */
+h1, h2, h3 {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Header styles */
+header {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Main section styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Input and button styles */
+.transaction-input, .transaction-list {
+    background-color: #454545;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-box label {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.input-box input {
+    padding: 12px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 1.1em;
+}
+
+.input-box input:focus {
+    border-color: #f4c242;
+    box-shadow: none;
+    outline: none;
+}
+
+.button {
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 20px;
+    background-color: #f4c242;
+    color: #3d3c3c;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover, .button:focus {
+    background-color: #e1a70a;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+
+/* Transaction list styles */
+.transaction-list {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.transaction-item {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    header, .transaction-input, .transaction-list {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .homebutton {
+        top: 15px;
+        left: 15px;
+    }
+
+    .input-box, .button {
+        width: 100%;
+    }
+}
+
+/* Home button styles */
+.homebutton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 253, 253);
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    z-index: 10;
+}
+
+.homebutton:hover {
+    background-color: #f4c242;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.homebutton:active {
+    background-color: #3d3c3c;
+    box-shadow: none;
+    color: white;
+    transform: translateY(1px);
+}
+
+.homebutton a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Placeholder styles */
+::placeholder {
+    color: #a9a9a9;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #a9a9a9;
+}
+
+::-ms-input-placeholder {
+    color: #a9a9a9;
+}
