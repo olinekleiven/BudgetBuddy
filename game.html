@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Saving</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+    <!-- Home Button -->
+    <div class="navigation">
+        <button class="homebutton">
+            <a href="balanse.html" style="color: black;">Home</a>
+        </button>
+    </div>
+
+    <!-- Rule Section -->
+    <div id="rulesSection">
+        <h2>Game Rules:</h2>
+        <ul>
+            <li>Catch the coin to get points</li>
+            <li>Don't crash into the wall</li>
+            <li>Don't crash into your tail</li>
+            <li>Have fun!</li>
+        </ul>
+    </div>
+
+    <!-- Game Area -->
+    <div id="gameArea"></div>
+
+    <!-- Score Display -->
+    <div id="score">Coins Collected: <span id="coinsCollected">0</span></div>
+
+    <!-- Start Button -->
+    <button id="startGameButton" class="start-over-button" style="display: none;">
+        Start Game 🚀
+    </button>
+
+    <!-- Start Over Button -->
+    <button id="startOverButton" class="start-over-button" style="display: none;">
+        Try Again? 🚀
+    </button>
+
+    <!-- High Score List -->
+    <div id="highScores">
+        <h2>High Scores</h2>
+        <ul id="highScoreList"></ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="nederst">
+        <p>&copy; 2023 BudgetBuddy</p>
+    </footer>
+
+    <!-- Game Script -->
+    <script src="game.js"></script>
+
+</body>
+</html>
+
+<!-- BudgetBuddy by Oline Kleiven-->
