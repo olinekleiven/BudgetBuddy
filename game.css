@@ -1,0 +1,214 @@
+/* Base styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #3d3c3c;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Game area styles */
+#gameArea {
+    margin-top: 30px;
+    display: grid;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #fff;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+}
+
+/* Game entities styles */
+.snake {
+    background-color: #00ff00;
+    border-radius: 50%;
+}
+
+.coin {
+    background-color: #ffD700;
+    border-radius: 50%;
+}
+
+/* Score styles */
+#score {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Home button styles */
+.homebutton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 253, 253);
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.homebutton:hover {
+    background-color: #f4c242;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.homebutton:active {
+    background-color: #3d3c3c;
+    box-shadow: none;
+    color: white;
+    transform: translateY(1px);
+}
+
+.homebutton a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Start over button styles */
+.start-over-button {
+    display: none;
+    margin: 0;
+    padding: 20px 40px;
+    font-size: 2em;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.start-over-button:hover {
+    background-color: #ff3333;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.start-over-button:active {
+    background-color: #e60000;
+}
+
+.start-over-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.start-over-button:hover::before {
+    left: 100%;
+}
+
+/* High scores styles */
+#highScores {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 200px;
+}
+
+#highScores h2,
+#highScoreList li {
+    margin: 0 0 10px;
+}
+
+#highScoreList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#highScoreList li {
+    border-top: 1px solid #555;
+    padding: 10px 0;
+}
+
+#highScoreList li:first-child {
+    border-top: none;
+}
+
+/* Rules section styles */
+#rulesSection {
+    position: absolute;
+    top: 138px;
+    left: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 200px;
+}
+
+#rulesSection h2,
+#rulesSection li {
+    margin: 0 0 10px;
+}
+
+#rulesSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#rulesSection li {
+    border-top: 1px solid #555;
+    padding: 10px 0;
+}
+
+#rulesSection li:first-child {
+    border-top: none;
+}
+
+/* Footer styles */
+.nederst {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    background-color: #3d3c3c;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    transition: all 0.6s ease-in-out;
+}
+
