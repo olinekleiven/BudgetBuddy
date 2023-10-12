@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saving</title>
+    <link rel="stylesheet" href="savings.css">
+    <script src="savings.js" defer></script>
+</head>
+<body>
+    <header>
+        <button class="homebutton">
+            <a href="balanse.html" style="color: black;">Home</a>
+        </button>
+    </header>
+
+    <main>
+        <h1>How much can YOU save?</h1>
+
+        <section class="savings-info">
+            <div class="info-box">
+                <h2>Welcome to your personal saving calculator</h2>
+                <p>Challenge yourself to save as much money as possible. <br> Write the amount of money in the box down to the left. </p>
+            </div>
+ 
+            <div class="info-box custom-info-box">
+                <div id="customInfoBox" class="info-box-item">
+                    <h2>Total Savings</h2>
+                    <p>$<span id="totalSavings">0</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="savings-input">
+            <div class="input-box">
+                <label for="addAmount">Enter the amount you have saved:</label>
+                <input type="number" id="addAmount" placeholder="Enter amount">
+            </div>
+            <button onclick="addToSavings()">Add</button>
+        </section>
+    </main>
+
+    <footer class="nederst">
+        <p>&copy; 2023 BudgetBuddy</p>
+    </footer>
+</body>
+</html>
+
+<!-- BudgetBuddy by Oline Kleiven-->
